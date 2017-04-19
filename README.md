@@ -120,5 +120,32 @@ except KeyboardInterrupt: # If CTRL+C is pressed, exit cleanly:
 
 ```
 
+## Basic barchart in Matplotlib
+
+```python
+import matplotlib.pyplot as plt
+
+def make_chart(data, labels, ylabel='', title=''):
+    #data -> data for each bar
+    N = len(data)  # amount of bars
+
+    ind = np.arange(N)  # the x locations for the bars
+    width = 0.6         # the width of the bars
+
+    # prepare diagram
+    fig, ax = plt.subplots()
+    bar1 = ax.bar(ind, data, width, color='r')
+
+    # x labels
+    ax.set_xticks(ind)  # label location
+    ax.set_xticklabels(labels, rotation='vertical')  # label for each bit of data
+
+    # more labels
+    ax.set_ylabel(ylabel)
+    ax.set_title(title)
+
+    # open graph window
+    plt.show()
+```
 ---
 Work in progress...
