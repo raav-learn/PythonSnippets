@@ -55,7 +55,7 @@ result = windll.kernel32.GetSystemPowerStatus(byref(powerclass))
 print powerclass.BatteryLifePercent
 ```
 
-## Base64
+## Base64/SHA512
 ```python
 import base64
 
@@ -63,6 +63,11 @@ text = "something something"
 
 encoded = base64.b64encode(text)
 decoded = base64.b64decode(encoded)
+```
+
+```python
+import hashlib
+print hashlib.sha512("TEXT TO HASH").hexdigest()
 ```
 
 ## Raspberry Pi GPIO (just some of my old code)
