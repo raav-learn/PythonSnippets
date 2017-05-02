@@ -129,6 +129,7 @@ except KeyboardInterrupt: # If CTRL+C is pressed, exit cleanly:
 
 ```python
 import matplotlib.pyplot as plt
+import numpy as np
 
 def make_chart(data, labels, ylabel='', title=''):
     #data -> data for each bar
