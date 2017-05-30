@@ -131,6 +131,7 @@ except KeyboardInterrupt: # If CTRL+C is pressed, exit cleanly:
 import matplotlib.pyplot as plt
 import numpy as np
 
+# data = [] | labels = []
 def make_chart(data, labels, ylabel='', title=''):
     #data -> data for each bar
     N = len(data)  # amount of bars
@@ -152,6 +153,27 @@ def make_chart(data, labels, ylabel='', title=''):
 
     # open graph window
     plt.show()
+```
+
+## Manipulate clipboard
+```python
+from Tkinter import Tk
+r = Tk()
+r.withdraw()                # Prevent window from opening
+txt = r.clipboard_get()     # Get current clipboard string
+r.clipboard_clear()         # Clear clipboard
+r.clipboard_append("hello") # Add text to clipboard
+r.update()                  # Save clipboard data (else it disapears after r.destroy())
+r.destroy()
+```
+
+## Easygui
+```python
+import easygui
+easygui.msgbox("yes, yes it works")
+value = easygui.enterbox("Redmine ticket number:")
+easygui.textbox(title="Output", text="Data and text etc..")
+# there is more on the man page
 ```
 ---
 Work in progress...
