@@ -1,6 +1,11 @@
 # PythonSnippets
 Just a page with python snippets
 
+```
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ 
+          ▀█▄▀▄▀██████ ▀█▄▀▄▀████▀ 
+            ▀█▄█▄███▀ ▀██▄█▄█
+```
 ## Simple post request
 [Python request guide](http://docs.python-requests.org/en/master/)
 
