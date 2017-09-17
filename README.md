@@ -180,5 +180,28 @@ value = easygui.enterbox("Redmine ticket number:")
 easygui.textbox(title="Output", text="Data and text etc..")
 # there is more on the man page
 ```
+
+## Cli easy choice - python2
+```python
+import string
+
+def make_choice_input(choice_list):
+    count = 1
+    for choice in choice_list:
+        print "%d\t: %s" % (count, choice)
+        count += 1
+    print "---------------------"
+    choice = raw_input("select number: ")
+    choice = int(choice)
+    if choice > 0 and choice <= len(choice_list):
+        return choice_list[choice-1]
+    else:
+        print "Unavailabe choice.. try again \n\n"
+        return make_choice_input(choice_list)
+
+choices = ["fitst","second","third"]
+choice = make_choice_input(choices)
+print "\nYou selected: %s" % choice
+```
 ---
 Work in progress...
