@@ -160,7 +160,7 @@ def make_chart(data, labels, ylabel='', title=''):
     plt.show()
 ```
 
-## Manipulate clipboard
+## Manipulate clipboard (py -2.7)
 ```python
 from Tkinter import Tk
 r = Tk()
